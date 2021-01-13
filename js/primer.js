@@ -1,67 +1,50 @@
 "use strict";
 
-// КОНСТРУКЦИЯ SWITCH
+// ЦЫКЛЫ
 
 // ПРИМЕР 1
-/* const browser = prompt('Ведите название бразера', '');
-switch (browser) {
-    case 'Edge':
-      alert( "You've got the Edge!" );
-      break;
-  
-    case 'Chrome':
-    case 'Firefox':
-    case 'Safari':
-    case 'Opera':
-      alert( 'Okay we support these browsers too' );
-      break;
-  
-    default:
-      alert( 'We hope that this page looks ok!' );
-  } 
-const browser = prompt('Ведите название бразера', '');
-if (browser == 'Edge') {
-    alert('You ve got the Edge!');
-} else if (browser == 'Chrome' || 'Opera' || 'Firefox' ||  'Safari') {
-    alert( 'Okay we support these browsers too' );
-} else {
-    alert( 'We hope that this page looks ok!' );
+// При помощи цикла for выведите чётные числа от 2 до 10.
+/* let num;
+for (let i = 1; i <= 10; i++ ){
+    if(i%2==0){
+        console.log(i);
+    }
 } */
 
 // ПРИМЕР 2
-
-/* const number = +prompt('Введите число между 0 и 3', '');
-
-if (number === 0) {
-  alert('Вы ввели число 0');
-}
-
-if (number === 1) {
-  alert('Вы ввели число 1');
-}
-
-if (number === 2 || number === 3) {
-  alert('Вы ввели число 2, а может и 3');
+/* Перепишите код, заменив цикл for на while, без изменения поведения цикла. */
+/* for (let i = 0; i < 3; i++) {
+    alert( `number ${i}!` );
+  } */
+/* let i = 0;
+while (i<3){
+    alert( `number ${i}!` );
+    i++;
 } */
 
-const number = +prompt('Введите число между 0 и 3', '');
+// ПРИМЕР 3
+/* Напишите цикл, который предлагает prompt ввести число, большее 100. 
+Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.
+Цикл должен спрашивать число пока либо посетитель не введёт число, большее 100, либо не нажмёт кнопку Отмена (ESC).
+Предполагается, что посетитель вводит только числа. 
+Предусматривать обработку нечисловых строк в этой задаче необязательно. */
 
-switch (number) {
-    case 0:
-        alert('Вы ввели число 0');
-    break;
-    
-    case 1:
-        alert('Вы ввели число 1');
-    break;
-    
-    case 2:
-    case 3:
-        alert('Вы ввели число 2, а может и 3');
-    break;
-    
-    default:
-      alert( 'Вели не те значения' );
+/* let num;
 
-}
-  
+do {
+  num = prompt("Введите число, большее 100?", 0);
+} while (num <= 100 && num); */
+
+// ПРИМЕР 4
+
+/* let n = +prompt('ведите число');
+
+nextPrime:
+for (let i = 2; i <= n; i++) { // Для всех i...
+
+  for (let j = 2; j < i; j++) { // проверить, делится ли число..
+    if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+  }
+
+  alert( i ); // простое число
+} */
