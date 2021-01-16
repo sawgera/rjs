@@ -38,13 +38,71 @@ do {
 // ПРИМЕР 4
 
 /* let n = +prompt('ведите число');
-
 nextPrime:
 for (let i = 2; i <= n; i++) { // Для всех i...
-
   for (let j = 2; j < i; j++) { // проверить, делится ли число..
     if (i % j == 0) continue nextPrime; // не подходит, берём следующее
   }
-
   alert( i ); // простое число
 } */
+
+// ФУНКЦИИ
+
+// ПРИМЕР 3
+/* Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b. */
+/* function min (a,b){
+  if (a>b){
+    return b;
+  }else {
+    return a;
+  }
+}
+
+let a = +prompt('Ведите число', 0);
+let b = +prompt('Введите число', 0);
+let res = (min(a,b));
+alert(res); */
+//   ПРИМЕР 4
+/* Напишите функцию pow(x,n), 
+которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат. */
+/* function pow(x, n) {
+  let result = x;
+
+  for (let i = 1; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
+
+let x = prompt("x?", '');
+let n = prompt("n?", '');
+
+if (n < 1) {
+  alert(`Степень ${n} не поддерживается, используйте натуральное число`);
+} else {
+  alert( pow(x, n) );
+} */
+
+//ПРИМЕР СТРЕЛОЧНОЙ ФУНКЦИИ
+/* function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Вы согласны?",
+  function() { alert("Вы согласились."); },
+  function() { alert("Вы отменили выполнение."); }
+); */
+
+/* function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Вы согласны?",
+  () => alert("Вы согласились."),
+  () => alert("Вы отменили выполнение.")
+); */
